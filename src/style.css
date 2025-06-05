@@ -1,0 +1,55 @@
+@-moz-document domain("https://www.youtube.com") {
+    html[dark],
+[dark] {
+
+    --yt-spec-raised-background: rgba(0, 0, 0, .65);
+    --yt-spec-menu-background: rgba(0, 0, 0, .65);
+    --yt-spec-inverted-background: #ffffffb5;
+}
+
+
+/* #container.ytd-masthead {
+
+	backdrop-filter: blur(10px);
+}
+
+*/
+.ytSearchboxComponentSuggestionsContainer {
+
+    backdrop-filter: blur(33px);
+    background-color: rgba(0, 0, 0, .65)
+}
+
+
+#info-bar.ytd-miniplayer .metadata.ytd-miniplayer {
+
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, .65);
+}
+
+ .ytd-popup-container {
+
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, .4) !important;
+}
+
+/* options toolbar */
+.ytp-popup {
+
+    background: rgba(0, 0, 0, .65) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* promo pop ups */
+/* yt-mealbar-promo-renderer[has-full-height-image] {
+    height: 192px;
+    backdrop-filter: blur(8px);
+} */
+
+
+
+html[dark] .sbsb_a {
+    background: rgba(0, 0, 0, .65);
+ /*   backdrop-filter: blur(33px); */
+}
+}
