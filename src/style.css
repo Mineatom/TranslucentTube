@@ -1,55 +1,104 @@
-@-moz-document domain("https://www.youtube.com") {
+/* ==UserStyle==
+@name           TranslucentTube
+@namespace      https://discord.gg/z4ygdTr
+@version        1.2.0
+@description    Higher contrast translucent menus in YouTube. Now supports light mode!
+@author         Mineatom
+==/UserStyle== */
+@-moz-document domain("www.youtube.com") {
+
     html[dark],
-[dark] {
+    [dark] {
 
-    --yt-spec-raised-background: rgba(0, 0, 0, .65);
-    --yt-spec-menu-background: rgba(0, 0, 0, .65);
-    --yt-spec-inverted-background: #ffffffb5;
-}
+        --yt-spec-raised-background: rgba(0, 0, 0, .65);
+        --yt-spec-menu-background: rgba(0, 0, 0, .65);
+        --yt-spec-inverted-background: #ffffffb5;
+    }
+
+    /* ───── Light Mode ───── */
+    html:not([dark]) {
+        --yt-spec-raised-background: rgba(255, 255, 255, 0.65);
+        --yt-spec-menu-background: rgba(255, 255, 255, 0.65);
+        --yt-spec-inverted-background: rgba(0, 0, 0, 0.05);
+    }
 
 
-/* #container.ytd-masthead {
+    /* DARK MODE STYLING */
+    /* #container.ytd-masthead {
 
 	backdrop-filter: blur(10px);
 }
 
 */
-.ytSearchboxComponentSuggestionsContainer {
+    html[dark] .ytSearchboxComponentSuggestionsContainer {
 
-    backdrop-filter: blur(33px);
-    background-color: rgba(0, 0, 0, .65)
-}
+        backdrop-filter: blur(33px);
+        background-color: rgba(0, 0, 0, .65)
+    }
 
 
-#info-bar.ytd-miniplayer .metadata.ytd-miniplayer {
+    html[dark] #info-bar.ytd-miniplayer .metadata.ytd-miniplayer {
 
-    backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, .65);
-}
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, .65);
+    }
 
- .ytd-popup-container {
+    html[dark] .ytd-popup-container {
 
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, .4) !important;
-}
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, .4) !important;
+    }
 
-/* options toolbar */
-.ytp-popup {
+    /* options toolbar */
+    html[dark] .ytp-popup {
 
-    background: rgba(0, 0, 0, .65) !important;
-    backdrop-filter: blur(10px);
-}
+        background: rgba(0, 0, 0, .65) !important;
+        backdrop-filter: blur(10px);
+    }
 
-/* promo pop ups */
-/* yt-mealbar-promo-renderer[has-full-height-image] {
+    /* promo pop ups */
+    /* yt-mealbar-promo-renderer[has-full-height-image] {
     height: 192px;
     backdrop-filter: blur(8px);
 } */
+    html[dark] .sbsb_a {
+        background: rgba(0, 0, 0, .65);
+    }
 
 
+    /* LIGHT MODE STYLING */
+    html:not([dark]) .ytSearchboxComponentSuggestionsContainer {
 
-html[dark] .sbsb_a {
-    background: rgba(0, 0, 0, .65);
- /*   backdrop-filter: blur(33px); */
-}
+        backdrop-filter: blur(33px);
+        background-color: rgba(255, 255, 255, .65)
+    }
+
+
+    html:not([dark]) #info-bar.ytd-miniplayer .metadata.ytd-miniplayer {
+
+        backdrop-filter: blur(5px);
+        background: rgba(255, 255, 255, .65);
+    }
+
+    html:not([dark]) .ytd-popup-container {
+
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, .4) !important;
+    }
+
+    /* options toolbar */
+    html:not([dark]) .ytp-popup {
+
+        background: rgba(29, 29, 29, .65) !important;
+        backdrop-filter: blur(10px);
+    }
+
+    /* promo pop ups */
+    /* yt-mealbar-promo-renderer[has-full-height-image] {
+    height: 192px;
+    backdrop-filter: blur(8px);
+} */
+    html:not([dark]) .sbsb_a {
+        background: rgba(255, 255, 255, .65);
+    }
 }
